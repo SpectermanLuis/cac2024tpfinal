@@ -27,7 +27,7 @@ const options = {
 
     traerDatosAclamadas(paginaActual);
 
-    traerDatosPeliculaPorId("155");
+    traerDatosPeliculaPorId("618588");
 
 
     document.querySelector('.boton_siguiente').addEventListener('click', () => {
