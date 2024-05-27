@@ -73,9 +73,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
             console.log('Datos de Inicio de Sesión:', loginData);
             
             loginModal.style.display = 'none';
-            
             // Redirigir a la página de bienvenida después del registro exitoso
-            window.location.href = '/inicio.html';
+            window.location.href = './inicio.html';
 
         }
     });
