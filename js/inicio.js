@@ -26,10 +26,7 @@ const options = {
     traerDatosTendencia(paginaActual);
 
     traerDatosAclamadas(paginaActual);
-
-    traerDatosPeliculaPorId("618588");
-
-
+    
     document.querySelector('.boton_siguiente').addEventListener('click', () => {
         paginaActual++;
         traerDatosTendencia(paginaActual); // Actualiza los datos de tendencia con la página siguiente
@@ -100,7 +97,7 @@ const options = {
 
       arregloPeliculas.forEach((pelicula) => {
         tarjetas += `<div class="tarjeta">
-        <a href="detalle.html?id=${pelicula.id}"> 
+        <a href="../pages/detalle.html?id=${pelicula.id}"> 
         <img src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path} alt="Juego 1">
         </a>
         </div>`;
