@@ -71,8 +71,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
             const loginData = { email, password };
             console.log('Datos de Inicio de Sesión:', loginData);
-
+            
             loginModal.style.display = 'none';
+
+            mostrarAlerta();
 
             // Redirigir a la página de bienvenida después del registro exitoso
             window.location.href = './inicio.html';
@@ -192,3 +194,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
         errorElement.style.display = 'none';
     }
 });
+
