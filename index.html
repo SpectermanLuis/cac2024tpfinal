@@ -26,7 +26,7 @@
 
     <!-- Modal de Iniciar Sesión -->
     <div id="loginModal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content-login">
             <span class="close" data-modal="loginModal">&times;</span>
             <h2>Iniciar Sesión</h2>
             <form id="loginForm">
@@ -34,17 +34,21 @@
                 <input type="email" placeholder="Correo Electronico" id="loginEmail" name="email">
                 <span class="error" id="loginEmailError"></span>
 
-                <!-- <label for="loginPassword">Contraseña:</label> -->
                 <input type="password" placeholder="Password" id="loginPassword" name="password">
                 <span class="error" id="loginPasswordError"></span>
                 <button type="submit">Ingresar</button>
+
+               <h5>Valores de prueba validos</h5> 
+               <h5>Correo Electronico =  usuario@email.com</h5> 
+               <h5>Password           =  1234</h5> 
+
             </form>
         </div>
     </div>
 
     <!-- Modal de Registro -->
     <div id="registerModal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content-register">
             <span class="close" data-modal="registerModal">&times;</span>
             <h2>Registrarse</h2>
             <form id="registerForm">
@@ -70,11 +74,9 @@
                     name="confirm_password">
                 <span class="error" id="registerConfirmPasswordError"></span>
 
-
                 <input type="date" id="fechaNacimiento"
                     name="fechaNacimiento">
                 <span class="error" id="registerFechaError"></span>
-
 
                 <label for="pais">Selecciona tu país:</label>
                 <select id="pais" class="pais">
@@ -96,7 +98,7 @@
                 <div class="terminos">
                     <input class="check" type="checkbox" id="terminos">
                     <label class="textoCheck" for="terminos">Acepto términos y condiciones</label>
-                    <div class="error-text"></div>
+                    <span class="error" id="registerTerminosError"></span>
                 </div>
 
                 <button type="submit">Registrar</button>
@@ -117,20 +119,6 @@
         <section id="peliculas">
 
         </section>
-
-        <!--Ventana Modal-->
-        <input type="checkbox" id="btn-modal">
-        <div class="container-modal">
-            <div class="content-modal">
-                <h2>Detalle</h2>
-                <p>Aca irian el detalle de la pelicula , el elenco y hasta un video con el trailer de la pelicula</p>
-                <div class="btn-cerrar">
-                    <label for="btn-modal">Cerrar</label>
-                </div>
-            </div>
-            <label for="btn-modal" class="cerrar-modal"></label>
-        </div>
-        <!--Fin de Ventana Modal-->
 
     </main>
 

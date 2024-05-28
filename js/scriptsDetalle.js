@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", function() {
     fetch(apiUrl,options)
         .then(response => response.json())
         .then(data => {
-            document.getElementById('header').style.backgroundImage = `url('https://image.tmdb.org/t/p/original${data.backdrop_path}')`;
+            console.log(data);
+          document.getElementById('header').style.backgroundImage = `url('https://image.tmdb.org/t/p/original${data.backdrop_path}')`;
             document.getElementById('title').innerText = data.title;
             document.getElementById('tagline').innerText = data.tagline;
             document.getElementById('poster').src = `https://image.tmdb.org/t/p/original${data.poster_path}`;
@@ -32,8 +33,9 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById('imdb_link').href = `https://www.imdb.com/title/${data.imdb_id}`;
             document.getElementById('vote_average').innerText = data.vote_average;
             document.getElementById('vote_count').innerText = data.vote_count;
-            document.getElementById('homepage').innerText = "Official Website";
+            document.getElementById('recaudacion').innerText = data.revenue;
+            document.getElementById('homepage').innerText = "Sitio Oficial";
             document.getElementById('homepage').href = data.homepage;
-        })
-        .catch(error => console.error('Error fetching movie data:', error));
+          })
+        .catch(error => console.error('Error', error));
 });

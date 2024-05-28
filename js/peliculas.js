@@ -20,7 +20,6 @@ const options = {
     .then(response => console.log(response))
     .catch(err => console.error(err)); */
 
-
     let paginaActual = 1; // Inicialmente la página actual es 1
 
     traerDatosTendencia(paginaActual);
@@ -55,8 +54,6 @@ const options = {
         .catch((error) => console.log(error));
     }
     
-
-
 
     function traerDatosTendencia(pagina) {
       // Obtener datos desde la api (url)
@@ -106,34 +103,6 @@ const options = {
       ubicacion.innerHTML = tarjetas;
     }
     
-
-
-/*     function crearMostrarTarjetas(arregloPeliculas, ubicacion) {
-      let tarjetas = "";
-
-      arregloPeliculas.forEach((pelicula) => {
-        tarjetas += `<div class="tarjeta">
-           <img src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path} alt="Juego 1">
-   
-        
-        </div>`;
-      });
-    
-      ubicacion.innerHTML = tarjetas;
-    }
-
- */
-
-
-        /*
-        <a href="../../detalle.html?id=${pelicula.id}" class="boton_detalle">Más Detalles</a> 
-        
-        <p class="genero">Genero : ${juego.genre}</p>
-        <p class="descripcion">${pelicula.title}</p>
-        <p class="precio">$19.99</p> */
-
-
-
     
 /*     fetch(`https://api.themoviedb.org/3/movie/now_playing?page=${page}`, options)
         .then(response => response.json())

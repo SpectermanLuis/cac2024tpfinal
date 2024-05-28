@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             
             loginModal.style.display = 'none';
             // Redirigir a la página de bienvenida después del registro exitoso
-            window.location.href = './pages/inicio.html';
+            window.location.href = './pages/peliculas.html';
 
         }
     });
@@ -89,6 +89,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const email = registerForm.email.value;
         const password = registerForm.password.value;
         const confirmPassword = registerForm.confirm_password.value;
+        
+        const fechaNacimiento = document.getElementById('fechaNacimiento').value;        
+
+        const terminos = document.getElementById('terminos').checked;
+
+        console.log(terminos);
 
         const pais = registerForm.pais.value;
 
@@ -137,6 +143,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
             hideError('registerConfirmPasswordError');
         }
 
+        // Validación de fecha Nacimiento
+        if (!validateFechaNacimiento(fechaNacimiento)) {
+            showError('registerFechaError', 'Ingresar Fecha Nacimiento');
+            valid = false;
+        } else {
+            hideError('registerFechaError');
+        }
+
+
+
         // Validación de pais
         if (!validatePais(pais)) {
             showError('registerPaisError', 'Ingresar Pais');
@@ -145,6 +161,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
             hideError('registerPaisError');
         }
 
+
+       if(!terminos) {
+         showError('registerTerminosError','Aceptar Terminos');
+         valid = false;
+       } else {
+        hideError('registerTerminosError');
+       }
 
         if (valid) {
             const registerData = { email, password, confirmPassword };
@@ -170,6 +193,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     function validatePais(pais) {
         if (pais.length === 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    function validateFechaNacimiento(fechaNacimiento) {
+        console.log(fechaNacimiento); 
+        if (!fechaNacimiento) {
             return false;
         } else {
             return true;
