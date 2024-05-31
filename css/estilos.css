@@ -71,7 +71,7 @@ button:hover {
 }
 
 .hero {
-  background-image: url("../assets/fondo02.jpg");
+  /* background-image: url("../assets/fondo02.jpg"); */
   background-size: cover;
   background-position: center;
   color: #fff;
